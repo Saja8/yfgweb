@@ -185,7 +185,7 @@ export function NavBar() {
         className={`fixed inset-0 z-[3000] min-h-dvh overflow-y-auto bg-black/95 backdrop-blur text-white pt-8 transition-all duration-300 ease-out xl:hidden ${
           isMenuShown
             ? 'translate-x-0 opacity-100 pointer-events-auto'
-            : 'translate-x-full opacity-0 pointer-events-none'
+            : 'translate-x-0 opacity-0 pointer-events-none invisible'
         }`}
         aria-hidden={!isMenuShown}
       >
