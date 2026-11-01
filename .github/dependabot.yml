@@ -9,6 +9,13 @@ updates:
    directory: "/"
    open-pull-requests-limit: 10
    versioning-strategy: lockfile-only
+   groups:
+     wix-patches-and-minors:
+       patterns: ['@wix/*']
+       update-types: ['minor', 'patch']
+     tooling-patches-and-minors:
+       patterns: ['@playwright/test', 'autoprefixer', 'postcss']
+       update-types: ['minor', 'patch']
    schedule:
      interval: "weekly"
      # Check for npm updates on Saturdays
