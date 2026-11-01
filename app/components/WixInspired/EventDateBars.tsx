@@ -82,7 +82,7 @@ function EventCarousel({
   const slides = getSlides(items);
   const isControlled = controlledIndex !== undefined;
   const [internalCurrent, setInternalCurrent] = useState(0);
-  const timerRef = useRef<ReturnType<typeof setInterval>>();
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const current = isControlled ? controlledIndex : internalCurrent;
 
   const resetTimer = useCallback(() => {
