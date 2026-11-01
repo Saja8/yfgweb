@@ -3480,10 +3480,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.1.10":
-  version: 19.1.10
-  resolution: "react@npm:19.1.10"
-  checksum: 8d78238abb4d75fdd92d60c0c033d2fdc516ea73cd580c9383aea55de476c143520f490173df309ffcac0fbbe937ed2874df83ba530a6ec4d4fa734f518d29e1
+"react@npm:19.3.1":
+  version: 19.3.1
+  resolution: "react@npm:19.3.1"
+  checksum: 08dc4ff4bf67184da3bc91ec89a03e6526479400270f7bbfd79b4ef36245a341a0861d0ce5e31443b6b9d17dd1006d95555e5d1ebf0c53a5f529947dc3c74dfb
   languageName: node
   linkType: hard
 
@@ -4524,7 +4524,7 @@ __metadata:
     next: 15.5.28
     postcss: ^8.4.19
     prettier: ^2.8.0
-    react: 19.1.10
+    react: 19.3.1
     react-dom: 19.1.10
     tailwindcss: ^3.2.4
     typescript: ^5.9.3

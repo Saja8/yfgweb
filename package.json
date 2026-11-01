@@ -12,7 +12,7 @@
   "dependencies": {
     "flowbite": "^1.5.4",
     "next": "15.5.28",
-    "react": "19.1.10",
+    "react": "19.3.1",
     "react-dom": "19.1.10"
   },
   "devDependencies": {
