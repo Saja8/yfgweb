@@ -2,14 +2,13 @@
 const nextConfig = {
   env: {},
   reactStrictMode: true,
-  swcMinify: true,
   experimental: {},
   eslint: {
     dirs: ['app'],
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     formats: ['image/webp'],

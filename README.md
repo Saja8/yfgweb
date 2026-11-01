@@ -5,8 +5,8 @@ HMDS, summer school, winter school, and meetings.
 
 ## Stack
 
-- Next.js 13
-- React 18
+- Next.js 15
+- React 19
 - TypeScript
 - Tailwind CSS
 
@@ -47,4 +47,6 @@ Use Node.js 22 for automated checks and the committed Yarn 3.3.0 release. Pull r
 
 Production Vercel deployments also receive an HTTP smoke check of the public event routes at https://yfgweb.vercel.app/. Protected preview URLs are not probed automatically, and their access controls are not bypassed. This is a reachability check, not a browser-based interaction test. The original template's Netlify workflow and demo-specific E2E trigger have been removed; this checkout has no `yarn e2e` script or browser test suite.
 
-Dependabot groups compatible Wix updates and tooling updates to reduce separate pull requests. Review and test updates before merging, especially framework major versions. A passing build does not establish that older framework dependencies are free of security advisories.
+The site no longer installs unused Wix commerce/event SDKs or the retired Netlify plugin. The Flowbite Tailwind plugin remains because the stylesheet configuration uses it. No Wix credentials are required.
+
+Dependabot groups framework patch updates and compatible tooling updates to reduce separate pull requests. Review and test updates before merging, especially framework major versions. A passing build is not a security audit.

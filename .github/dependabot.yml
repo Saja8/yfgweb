@@ -8,13 +8,13 @@ updates:
  - package-ecosystem: "npm"
    directory: "/"
    open-pull-requests-limit: 10
-   versioning-strategy: lockfile-only
+   versioning-strategy: increase
    groups:
-     wix-patches-and-minors:
-       patterns: ['@wix/*']
-       update-types: ['minor', 'patch']
+     framework-patches:
+       patterns: ['next', 'react', 'react-dom', 'eslint-config-next', '@types/react*']
+       update-types: ['patch']
      tooling-patches-and-minors:
-       patterns: ['@playwright/test', 'autoprefixer', 'postcss']
+       patterns: ['autoprefixer', 'postcss', 'typescript']
        update-types: ['minor', 'patch']
    schedule:
      interval: "weekly"
