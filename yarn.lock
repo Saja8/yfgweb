@@ -3462,14 +3462,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.1.10":
-  version: 19.1.10
-  resolution: "react-dom@npm:19.1.10"
+"react-dom@npm:19.3.1":
+  version: 19.3.1
+  resolution: "react-dom@npm:19.3.1"
   dependencies:
-    scheduler: ^0.26.0
+    scheduler: ^0.28.0
   peerDependencies:
-    react: ^19.1.10
-  checksum: f65b8291ec957a43dbc7b135e13971a620dacb5f9f627d92f614a464dd4f193ef21f47348ec84a0f4f0c4c2dee282dd225805ffc4fa68154e315460f5d442277
+    react: ^19.3.1
+  checksum: f00ab3c46a938720e66850f211cbbc37db4eda120210f468e3f728a1cd40d28e2a7bb6f3fd8b68099a1138ba45c474c9efa3c3ee4154194aff983c9f80f6cf81
   languageName: node
   linkType: hard
 
@@ -3668,10 +3668,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "scheduler@npm:0.26.0"
-  checksum: c63a9f1c0e5089b537231cff6c11f75455b5c8625ae09535c1d7cd0a1b0c77ceecdd9f1074e5e063da5d8dc11e73e8033dcac3361791088be08a6e60c0283ed9
+"scheduler@npm:^0.28.0":
+  version: 0.28.0
+  resolution: "scheduler@npm:0.28.0"
+  checksum: 2ec673f773d3b8992ca047a7e94e21b0f6dfea8414935a0d92b070ce1ea6b1b5ee97976f3efc9f3eb49982957b1cd8e38a20b63fb14ed6a848ae063aeb87e751
   languageName: node
   linkType: hard
 
@@ -4525,7 +4525,7 @@ __metadata:
     postcss: ^8.4.19
     prettier: ^2.8.0
     react: 19.1.10
-    react-dom: 19.1.10
+    react-dom: 19.3.1
     tailwindcss: ^3.2.4
     typescript: ^5.9.3
   languageName: unknown
