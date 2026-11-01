@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   smoke:
-    if: github.event_name == 'workflow_dispatch' || (github.event.deployment_status.state == 'success' && contains(github.event.deployment_status.target_url, 'yfgweb'))
+    if: github.event_name == 'workflow_dispatch' || (github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -23,4 +23,4 @@ jobs:
           node-version: '22'
       - run: node scripts/check-deployment.mjs
         env:
-          DEPLOYMENT_URL: ${{ inputs.deploymentUrl || github.event.deployment_status.target_url }}
+          DEPLOYMENT_URL: ${{ inputs.deploymentUrl || 'https://yfgweb.vercel.app' }}
