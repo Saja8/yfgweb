@@ -22,7 +22,7 @@ function getDisplayStatus(event: YFGEvent): 'upcoming' | 'planning' | 'past' {
     return 'planning';
   }
 
-  const timestamp = Date.parse(event.date);
+  const timestamp = event.date ? Date.parse(event.date) : NaN;
   if (Number.isNaN(timestamp)) {
     return event.status === 'past' ? 'past' : 'upcoming';
   }
@@ -33,8 +33,8 @@ function getDisplayStatus(event: YFGEvent): 'upcoming' | 'planning' | 'past' {
 }
 
 function sortEvents(events: YFGEvent[]) {
-  const getTime = (date: string) => {
-    const value = Date.parse(date);
+  const getTime = (date?: string) => {
+    const value = date ? Date.parse(date) : NaN;
     return Number.isNaN(value) ? Number.MAX_SAFE_INTEGER : value;
   };
 
@@ -88,7 +88,6 @@ export default function HomePage() {
   });
   const dateBarItems = allSorted.map((event) => ({
     title: event.title,
-    date: event.date,
     dateFormatted: event.dateFormatted,
     location: event.location,
     subtitle: event.venue === event.location ? event.location : event.venue,

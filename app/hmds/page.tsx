@@ -4,7 +4,7 @@ import EventPageNav from '@app/components/EventPageNav';
 import { HMDS_PAGE_NAV_ITEMS } from '@app/data/eventPageNav';
 import { HMDS_TOPICS, HMDS_ORGANIZING, HMDS_TECHNICAL } from '@app/data/events';
 
-const HMDS_OFFICIAL_URL = 'https://hmds-murex.vercel.app';
+const HMDS_OFFICIAL_URL = 'https://hmds2027.org/';
 
 export default function HMDSPage() {
   return (
@@ -24,21 +24,12 @@ export default function HMDSPage() {
                 Systems, connecting robotics, integration, interoperability, and
                 advanced engineering applications.
               </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Link
-                  href="/hmds/registration"
-                  className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-                >
-                  Registration updates
-                </Link>
-                <a
-                  href={HMDS_OFFICIAL_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border border-sky-200 bg-white/90 px-5 py-2.5 text-sm font-semibold text-zinc-900 transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 dark:border-white/15 dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/15"
-                >
-                  Open official site
-                </a>
+              <div className="mt-7 text-sm leading-7 text-zinc-700 dark:text-zinc-300 max-w-2xl">
+                See the{' '}
+                <a href={HMDS_OFFICIAL_URL} className="underline">
+                  official HMDS website
+                </a>{' '}
+                for news, registration, and submission details.
               </div>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/70 bg-white/85 p-4 dark:border-white/10 dark:bg-white/10">
@@ -212,21 +203,10 @@ export default function HMDSPage() {
                 notes with the upcoming edition.
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href={HMDS_OFFICIAL_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-                >
-                  Open official site ↗
-                </a>
-                <Link
-                  href="/hmds/registration"
-                  className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-800 transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
-                >
-                  Registration updates
-                </Link>
+              <div className="mt-6 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                For the latest registration and submission information, refer to
+                the official HMDS website. The 2025 archive remains here as a
+                reference for the symposium program and topics.
               </div>
             </div>
           </div>
@@ -248,7 +228,7 @@ export default function HMDSPage() {
                 </p>
               </div>
               <div className="text-right text-sm text-zinc-600 dark:text-zinc-300">
-                <div className="font-semibold">Apr 1–4, 2027</div>
+                <div className="font-semibold">Mar 30–Apr 2, 2027</div>
                 <div>4-day program</div>
               </div>
             </div>

@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import EventPageNav from '@app/components/EventPageNav';
 import { HMDS_PAGE_NAV_ITEMS } from '@app/data/eventPageNav';
-import { SITE_CONTACT_EMAIL, createSiteMailto } from '@app/data/siteContact';
+import { SITE_CONTACT_EMAIL } from '@app/data/siteContact';
 
-const HMDS_OFFICIAL_URL = 'https://hmds-murex.vercel.app';
-const HMDS_CONTACT_MAILTO = createSiteMailto('HMDS 2027 Inquiry');
+const HMDS_REGISTRATION_URL = 'https://hmds2027.org/register';
 
 export default function HMDSRegistrationPage() {
   return (
@@ -23,32 +22,20 @@ export default function HMDSRegistrationPage() {
               <h1 className="mt-4 text-4xl leading-[0.94] tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-6xl">
                 Registration
                 <span className="mt-1 block text-indigo-700 dark:text-indigo-300">
-                  in preparation
+                  for HMDS 2027
                 </span>
               </h1>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300 sm:text-base">
-                The local HMDS materials state that the registration system and
-                abstract submission portal are still being prepared. Use the
-                official site for updates. This site uses one shared contact for
-                general inquiries.
+                The official HMDS website provides attendee registration,
+                current fees, and payment instructions.
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href={HMDS_OFFICIAL_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-                >
-                  Open official site
-                </a>
-                <a
-                  href={HMDS_CONTACT_MAILTO}
-                  className="inline-flex items-center justify-center rounded-xl border border-zinc-300 px-5 py-2.5 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
-                >
-                  Email contact
-                </a>
-              </div>
+              <a
+                href={HMDS_REGISTRATION_URL}
+                className="mt-7 inline-flex rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 focus-visible:ring-2 focus-visible:ring-indigo-400"
+              >
+                Register on the official HMDS website
+              </a>
             </div>
           </div>
         </div>
@@ -60,13 +47,13 @@ export default function HMDSRegistrationPage() {
       />
 
       <section className="px-6 pb-12 sm:px-14 sm:pb-14">
-        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
+        <div className="mx-auto max-w-5xl">
           <div className="rounded-[28px] border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 sm:p-8">
             <div className="text-xs uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
-              Current status
+              Symposium details
             </div>
             <h2 className="mt-3 text-2xl leading-tight text-zinc-950 dark:text-zinc-100">
-              Registration updates will be published here
+              Plan your participation
             </h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-4 dark:border-zinc-700 dark:bg-zinc-800/80">
@@ -74,7 +61,7 @@ export default function HMDSRegistrationPage() {
                   Date
                 </div>
                 <div className="mt-2 text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                  Apr 1–4, 2027
+                  Mar 30–Apr 2, 2027
                 </div>
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-4 dark:border-zinc-700 dark:bg-zinc-800/80">
@@ -98,38 +85,24 @@ export default function HMDSRegistrationPage() {
 
           <div className="rounded-[28px] border border-zinc-200 bg-[#eef2ff] p-6 shadow-sm dark:border-zinc-800 dark:bg-indigo-950/30 sm:p-8">
             <div className="text-xs uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
-              What to do now
+              Note
             </div>
-            <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-700 dark:text-zinc-200">
-              <div className="rounded-2xl border border-zinc-200 bg-white/80 px-4 py-3 dark:border-white/10 dark:bg-white/5">
-                1. Follow the official HMDS site for the portal opening.
-              </div>
-              <div className="rounded-2xl border border-zinc-200 bg-white/80 px-4 py-3 dark:border-white/10 dark:bg-white/5">
-                2. For general questions on this site, use the shared contact
-                email below.
-              </div>
-              <div className="rounded-2xl border border-zinc-200 bg-white/80 px-4 py-3 dark:border-white/10 dark:bg-white/5">
-                3. The earlier archived fee references are intentionally kept
-                off this page until the live 2027 registration details are
-                confirmed.
-              </div>
+            <div className="mt-5 space-y-4 text-sm leading-7 text-zinc-700 dark:text-zinc-200">
+              <p>
+                The{' '}
+                <a href="https://hmds2027.org/authors" className="underline">
+                  HMDS author information page
+                </a>{' '}
+                lists submission instructions and deadlines.
+              </p>
+              <p>
+                If you need clarifications about the content shown here, please
+                email the HMDS inquiry address or return to the HMDS overview
+                page for general event details.
+              </p>
             </div>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href={HMDS_OFFICIAL_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-              >
-                Open official site
-              </a>
-              <Link
-                href="/hmds"
-                className="inline-flex items-center justify-center rounded-xl border border-zinc-300 px-5 py-2.5 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
-              >
-                Back to overview
-              </Link>
+            <div className="mt-4 text-sm text-zinc-700 dark:text-zinc-300">
+              Return to the <Link href="/hmds" className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-300">HMDS overview</Link>.
             </div>
           </div>
         </div>

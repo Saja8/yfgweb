@@ -1,9 +1,5 @@
 // Static event data for IFToMM YFG Events Platform
 // This replaces the Wix CMS backend with hardcoded content
-import {
-  SUMMER_SCHOOL_EVENT_NAME,
-  SUMMER_SCHOOL_PROGRAM_NAME,
-} from '@app/data/summerSchool';
 
 export interface YFGEvent {
   id: string;
@@ -11,7 +7,7 @@ export interface YFGEvent {
   title: string;
   subtitle: string;
   description: string;
-  date: string;
+  date?: string;
   dateFormatted: string;
   location: string;
   venue: string;
@@ -29,16 +25,36 @@ export interface CommitteeMember {
   institution?: string;
 }
 
-export interface EventImageAsset {
-  id: string;
-  src: string;
-  alt: string;
-  label: string;
-  title: string;
-  credit: string;
-  license: string;
-  sourceUrl: string;
-}
+export const SUMMER_SCHOOL: YFGEvent = {
+  id: 'summer-school-2027',
+  slug: 'summer-school-2027',
+  title: 'Mechanisms for Flight',
+  subtitle: 'Tokyo Summer School 2027',
+  description:
+    'Explore mechanism and machine science through two flight projects: a mechanism-based aircraft and a quadrotor.',
+  date: '2027-07-05',
+  dateFormatted: 'July 5–16, 2027',
+  location: 'Tokyo, Japan',
+  venue: 'Tokyo Metropolitan University, Hino Campus',
+  status: 'planning',
+  category: 'summer-school',
+  imagePlaceholder: 'SUMMER',
+};
+
+export const WINTER_SCHOOL: YFGEvent = {
+  id: 'winter-school-2027',
+  slug: 'winter-school-2027',
+  title: 'IFToMM YFG Winter School 2027',
+  subtitle: 'Winter School 2027',
+  description:
+    'The Young Faculty Group is exploring a 2027 winter school in Chile or elsewhere in Latin America.',
+  dateFormatted: 'Dates to be confirmed',
+  location: 'Latin America (tentative)',
+  venue: 'To be confirmed',
+  status: 'planning',
+  category: 'winter-school',
+  imagePlaceholder: 'WINTER',
+};
 
 export const YFG_EVENTS: YFGEvent[] = [
   {
@@ -82,14 +98,14 @@ export const YFG_EVENTS: YFGEvent[] = [
       '2nd International Symposium on Heterogeneous and Multi-Domain Systems',
     description:
       'HMDS 2027 focuses on cutting-edge research in cyber-physical systems integration, multi-domain coordination, advanced robotics, and system interoperability. Features workshops, paper presentations, poster sessions, and cultural activities.',
-    date: '2027-04-01',
-    dateFormatted: 'Apr 1–4, 2027',
+    date: '2027-03-30',
+    dateFormatted: 'Mar 30–Apr 2, 2027',
     location: 'Tokyo, Japan',
     venue: 'Tokyo Metropolitan University, Minami-Osawa Campus',
     status: 'upcoming',
     category: 'conference',
     registrationUrl: '/hmds/registration',
-    websiteUrl: 'https://hmds-murex.vercel.app',
+    websiteUrl: 'https://hmds2027.org/',
     imagePlaceholder: 'HMDS',
   },
   {
@@ -109,22 +125,7 @@ export const YFG_EVENTS: YFGEvent[] = [
     websiteUrl: 'https://hmds2026.vercel.app',
     imagePlaceholder: 'HMDS',
   },
-  {
-    id: 'summer-school-2026',
-    slug: 'summer-school-2026',
-    title: SUMMER_SCHOOL_EVENT_NAME,
-    subtitle: SUMMER_SCHOOL_PROGRAM_NAME,
-    description:
-      'A 10-day interdisciplinary summer school using Tokyo as a living laboratory. The program combines lectures, field visits, and team project work centered on mechanism and machine science applications in mobility, logistics, energy, resilience, and urban infrastructure.',
-    date: '2026-07-22',
-    dateFormatted: 'Jul 22–31, 2026',
-    location: 'Tokyo, Japan',
-    venue: 'Tokyo Metropolitan University',
-    status: 'upcoming',
-    category: 'summer-school',
-    registrationUrl: '/summer-school/registration',
-    imagePlaceholder: 'SUMMER',
-  },
+  SUMMER_SCHOOL,
   {
     id: 'yfg-mms-2024',
     slug: 'yfg-mms-2024',
@@ -141,22 +142,7 @@ export const YFG_EVENTS: YFGEvent[] = [
     category: 'symposium',
     imagePlaceholder: 'ONLINE',
   },
-  {
-    id: 'winter-school-tbd',
-    slug: 'winter-school',
-    title: 'IFToMM YFG Winter School 2027',
-    subtitle: 'Mechanism and Machine Science — Chile Edition',
-    description:
-      'A focused winter school hosted in Chile on advanced topics in mechanism and machine science, coordinated with IFToMM YFG President Claudio Villegas and regional partners.',
-    date: '2027-01-25',
-    dateFormatted: 'Jan 25–29, 2027',
-    location: 'Biobío Region, Chile',
-    venue: 'University of Bío-Bío, Concepción Campus',
-    status: 'upcoming',
-    category: 'winter-school',
-    registrationUrl: '/winter-school/registration',
-    imagePlaceholder: 'WINTER',
-  },
+  WINTER_SCHOOL,
 ];
 
 export const YFG_MMS_2025_DATES = [
@@ -289,42 +275,6 @@ export const HMDS_TECHNICAL: CommitteeMember[] = [
     name: 'Iván Trejo Zúñiga',
     country: 'Mexico',
     institution: 'Universidad Tecnológica de San Juan del Río',
-  },
-];
-
-export const TOKYO_SUMMER_SCHOOL_GALLERY: EventImageAsset[] = [
-  {
-    id: 'sensoji',
-    src: '/images/tokyo/sensoji-asakusa.jpg',
-    alt: 'View of Senso-ji temple in Asakusa, Tokyo.',
-    label: 'Tokyo landmark',
-    title: 'Senso-ji, Asakusa',
-    credit: 'David Stanley / Wikimedia Commons',
-    license: 'CC BY 2.0',
-    sourceUrl:
-      'https://commons.wikimedia.org/wiki/File:Sens%C5%8D-ji._Asakusa_Tokyo._(41781495365).jpg',
-  },
-  {
-    id: 'skytree',
-    src: '/images/tokyo/tokyo-skytree-day.jpg',
-    alt: 'Tokyo Skytree seen from the city during the day.',
-    label: 'City landmark',
-    title: 'Tokyo Skytree',
-    credit: 'Kakidai / Wikimedia Commons',
-    license: 'CC BY-SA 3.0',
-    sourceUrl:
-      'https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_2014_%E2%85%A2.jpg',
-  },
-  {
-    id: 'campus',
-    src: '/images/summer-school/tmu-campus.jpg',
-    alt: 'Tokyo Metropolitan University campus building under a clear sky.',
-    label: 'Host campus',
-    title: 'Tokyo Metropolitan University',
-    credit: 'Mytho88 / Wikimedia Commons',
-    license: 'CC BY-SA 2.5',
-    sourceUrl:
-      'https://commons.wikimedia.org/wiki/File:Tokyo_Metropolitan_University_01.jpg',
   },
 ];
 

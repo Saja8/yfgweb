@@ -10,107 +10,88 @@ import {
 const OFFICIAL_SECOND_YFG_URL = 'https://iftomm-yfgs2026.sciencesconf.org';
 const FIRST_YFG_URL = 'https://saja8.github.io/IFToMM_YFG-MMS/';
 
+const currentEditionFacts = [
+  ['Edition', '2nd IFToMM YFG Symposium'],
+  ['Dates', 'April 15-17, 2026'],
+  ['Location', 'Monastir, Tunisia'],
+  ['Live updates', 'Official SciencesConf site'],
+];
+
 export default function YFGPage() {
   return (
-    <div className="mx-auto relative pt-16">
-      <section className="px-6 sm:px-14 py-8 sm:py-10">
-        <div className="max-w-5xl mx-auto overflow-hidden rounded-[30px] border border-sky-100 bg-white shadow-sm dark:border-sky-500/20 dark:bg-zinc-900">
-          <div className="grid lg:grid-cols-[1.02fr_0.98fr]">
-            <div className="bg-gradient-to-br from-sky-100 via-white to-cyan-100 px-6 py-8 text-zinc-900 dark:from-sky-950 dark:via-blue-950 dark:to-cyan-900 dark:text-white sm:px-8 sm:py-10">
-              <div className="inline-flex items-center rounded-full border border-sky-200 dark:border-white/20 bg-sky-50 dark:bg-white/10 px-3 py-1 text-xs font-semibold tracking-[0.12em] uppercase">
-                IFToMM Young Faculty Group
-              </div>
-              <h1 className="mt-5 text-3xl sm:text-5xl font-extrabold tracking-tight">
-                YFG Symposia
-              </h1>
-              <p className="mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-sky-800 dark:text-cyan-100/90">
-                The symposium series for IFToMM Young Faculty Group members,
-                with the current official site for the new edition and a clean
-                path to the first symposium archive.
-              </p>
+    <div className="relative pt-16">
+      <section className="px-4 py-5 sm:px-8 sm:py-8 lg:px-14">
+        <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="px-6 py-8 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 dark:text-sky-300">
+              IFToMM Young Faculty Group
+            </p>
+            <h1 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-6xl sm:leading-[0.95]">
+              YFG Symposia
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-600 dark:text-zinc-300 sm:text-lg">
+              A concise gateway for the Young Faculty Group symposium series:
+              the current official edition, the first symposium archive, and
+              the recurring meeting route.
+            </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href={OFFICIAL_SECOND_YFG_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sky-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
-                >
-                  Open official registration
-                </a>
-                <a
-                  href={FIRST_YFG_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border border-sky-200 bg-white/90 px-5 py-2.5 text-sm font-semibold text-sky-900 transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 dark:border-white/15 dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/15"
-                >
-                  Open archive site
-                </a>
-              </div>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <a
-                  href={OFFICIAL_SECOND_YFG_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group rounded-2xl border border-cyan-200 dark:border-cyan-200/30 bg-white/85 dark:bg-white/10 p-4 backdrop-blur hover:bg-white dark:hover:bg-white/15 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200"
-                >
-                  <div className="text-xs uppercase tracking-[0.16em] text-cyan-700 dark:text-cyan-200">
-                    Current edition
-                  </div>
-                  <div className="mt-2 text-lg font-semibold">YFGS 2026</div>
-                  <div className="mt-2 text-sm text-sky-900 dark:text-cyan-100/85">
-                    Monastir, Tunisia. Program, submissions, and registration
-                    are hosted on the official symposium site.
-                  </div>
-                  <div className="mt-4 text-xs text-cyan-700 dark:text-cyan-100/80">
-                    Open official site ↗
-                  </div>
-                </a>
-
-                <a
-                  href={FIRST_YFG_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group rounded-2xl border border-blue-200 dark:border-blue-200/25 bg-white/85 dark:bg-black/15 p-4 backdrop-blur hover:bg-white dark:hover:bg-black/20 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-200"
-                >
-                  <div className="text-xs uppercase tracking-[0.16em] text-blue-700 dark:text-blue-200">
-                    Archive
-                  </div>
-                  <div className="mt-2 text-lg font-semibold">
-                    First symposium
-                  </div>
-                  <div className="mt-2 text-sm text-blue-900 dark:text-blue-100/85">
-                    The 2024 YFG-MMS edition remains available as the archive
-                    site for the first symposium.
-                  </div>
-                  <div className="mt-4 text-xs text-blue-700 dark:text-blue-100/80">
-                    Open archive site ↗
-                  </div>
-                </a>
-              </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={OFFICIAL_SECOND_YFG_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-zinc-950 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sky-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 dark:bg-white dark:text-zinc-950 dark:hover:bg-sky-100"
+              >
+                Open official registration
+              </a>
+              <a
+                href={FIRST_YFG_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-zinc-300 px-5 py-2.5 text-sm font-semibold text-zinc-800 transition-colors hover:border-sky-300 hover:bg-sky-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 dark:border-zinc-700 dark:text-zinc-100 dark:hover:border-sky-500/40 dark:hover:bg-zinc-800"
+              >
+                Open 2024 archive
+              </a>
             </div>
 
-            <div className="relative min-h-[280px] bg-zinc-900">
-              <Image
-                src="/images/yfg/monastir-ribat.jpg"
-                alt="Monastir Ribat in Tunisia"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 hidden sm:block rounded-2xl border border-white/15 bg-black/45 p-4 text-white backdrop-blur">
-                <div className="text-xs uppercase tracking-[0.18em] text-sky-200">
-                  Upcoming host city
+            <dl className="mt-10 grid gap-4 sm:grid-cols-2">
+              {currentEditionFacts.map(([label, value]) => (
+                <div
+                  key={label}
+                  className="border-t border-zinc-200 pt-4 dark:border-zinc-800"
+                >
+                  <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+                    {label}
+                  </dt>
+                  <dd className="mt-1 text-sm font-medium leading-6 text-zinc-900 dark:text-zinc-100">
+                    {value}
+                  </dd>
                 </div>
-                <div className="mt-2 text-lg font-medium">
+              ))}
+            </dl>
+          </div>
+
+          <div className="relative min-h-[320px] bg-zinc-900 sm:min-h-[420px] lg:min-h-full">
+            <Image
+              src="/images/yfg/monastir-ribat.jpg"
+              alt="Monastir Ribat in Tunisia"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 46vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
+              <div className="max-w-md text-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-200">
+                  Current host city
+                </p>
+                <p className="mt-2 text-2xl font-semibold">
                   Monastir, Tunisia
-                </div>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-100/85">
-                  The next symposium is currently routed through the official
-                  external site.
+                </p>
+                <p className="mt-2 text-sm leading-6 text-white/85">
+                  Program, submission, and registration updates are maintained
+                  on the official symposium website.
                 </p>
               </div>
             </div>
@@ -120,177 +101,167 @@ export default function YFGPage() {
 
       <EventPageNav items={YFG_PAGE_NAV_ITEMS} activeHref="/yfg" />
 
-      <div className="max-w-5xl mx-auto px-6 sm:px-14 py-10 space-y-8">
-        <section className="rounded-2xl border border-sky-100 dark:border-sky-500/20 bg-white dark:bg-zinc-900 shadow-sm overflow-hidden">
-          <div className="p-8 bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-500/10 dark:to-cyan-500/10 border-b border-sky-100 dark:border-sky-500/10">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <span className="inline-flex rounded-full border border-sky-200 bg-sky-100 px-2.5 py-1 text-xs font-semibold text-sky-800 dark:border-sky-400/20 dark:bg-sky-500/10 dark:text-sky-300">
-                  Upcoming
-                </span>
-                <h2 className="mt-3 text-2xl font-bold text-zinc-900 dark:text-zinc-100">
-                  2nd IFToMM YFG Symposium (YFGS 2026)
-                </h2>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300 max-w-2xl">
-                  The official site currently lists Monastir, Tunisia, with
-                  conference days on April 15-17, 2026. Visit the SciencesConf
-                  page for the latest program, submissions, and registration
-                  information.
-                </p>
-              </div>
-              <a
-                href={OFFICIAL_SECOND_YFG_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
-              >
-                Open official site <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+      <section className="px-4 py-8 sm:px-8 lg:px-14">
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-[20px] border border-sky-100 bg-sky-50 p-6 dark:border-sky-500/20 dark:bg-sky-950/30 sm:p-8">
+            <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold text-sky-800 shadow-sm dark:bg-sky-500/10 dark:text-sky-200">
+              Upcoming
+            </span>
+            <h2 className="mt-4 text-2xl font-semibold leading-tight text-zinc-950 dark:text-white sm:text-3xl">
+              YFGS 2026
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300 sm:text-base">
+              The official site lists conference days on April 15-17, 2026 in
+              Monastir. Visitors should use SciencesConf for the latest program,
+              submissions, and registration information.
+            </p>
+            <a
+              href={OFFICIAL_SECOND_YFG_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex min-h-[42px] items-center justify-center rounded-xl bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+            >
+              Open official site
+            </a>
           </div>
 
-          <div className="p-8 grid gap-6 md:grid-cols-2">
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400">
-                Current official details
-              </h3>
-              <ul className="mt-3 space-y-2 text-sm text-zinc-700 dark:text-zinc-200">
-                <li>Location: Monastir, Tunisia</li>
-                <li>Conference days: April 15-17, 2026</li>
-                <li>
-                  Official announcements and updated symposium information
-                </li>
-                <li>Registration and participation details</li>
-                <li>Program and submission updates</li>
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950/50 p-5">
-              <div className="text-xs uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400">
-                Routing
-              </div>
-              <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-200 leading-relaxed">
-                This YFG portal keeps the overview here and sends visitors to
-                the official external site for live symposium details.
+          <div className="grid gap-4 sm:grid-cols-2">
+            <section className="rounded-[20px] border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+                What stays here
               </p>
-              <a
-                href={OFFICIAL_SECOND_YFG_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-sky-700 hover:underline dark:text-sky-300"
-              >
-                Open official site <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+              <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+                This portal keeps the stable overview, edition history, and
+                navigation across Young Faculty Group events.
+              </p>
+            </section>
+            <section className="rounded-[20px] border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+                What is external
+              </p>
+              <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+                Live details, registration, and new announcements are routed to
+                the official symposium website.
+              </p>
+            </section>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm p-8">
-          <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+      <section className="px-4 py-8 sm:px-8 lg:px-14">
+        <div className="mx-auto max-w-6xl rounded-[20px] border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 sm:p-8 lg:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <span className="inline-flex rounded-full border border-zinc-200 bg-zinc-100 px-2.5 py-1 text-xs font-semibold text-zinc-700 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+              <span className="inline-flex rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold text-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
                 Past / 1st Symposium
               </span>
-              <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mt-3">
-                1st IFToMM YFG-MMS — 2024
+              <h2 className="mt-4 max-w-xl text-2xl font-semibold leading-tight text-zinc-950 dark:text-white sm:text-3xl">
+                1st IFToMM YFG-MMS
               </h2>
-              <p className="text-zinc-500 dark:text-zinc-400">
+              <p className="mt-2 text-base text-zinc-500 dark:text-zinc-400">
                 Emerging Fields in Mechanism and Machine Science
               </p>
-            </div>
-            <div className="flex flex-col items-end gap-2">
-              <div className="text-right text-sm text-zinc-600 dark:text-zinc-300">
-                <div className="font-semibold">Nov 19–21, 2024</div>
-                <div>Online</div>
+              <div className="mt-5 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+                <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                  Nov 19-21, 2024 · Online
+                </p>
+                <p className="mt-3">
+                  The inaugural edition was a single-track, peer-reviewed
+                  online symposium for young faculty members, combining research
+                  presentations with discussion sessions.
+                </p>
               </div>
               <a
                 href={FIRST_YFG_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 px-3 py-2 text-sm font-medium text-zinc-800 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                className="mt-6 inline-flex min-h-[42px] items-center justify-center rounded-xl border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
               >
-                Open archive site <span aria-hidden="true">↗</span>
+                Open archive site
               </a>
             </div>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
-                About
-              </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed mb-5">
-                The inaugural IFToMM YFG-MMS Online Symposium was a
-                single-track, peer-reviewed event for young faculty members.
-                Talks combined self-introduction and research presentations,
-                followed by discussion sessions.
-              </p>
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+                  Topics
+                </h3>
+                <div className="mt-4 grid gap-2 text-sm text-zinc-700 dark:text-zinc-300 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
+                  {MMS_TOPICS.slice(0, 12).map((topic) => (
+                    <div key={topic} className="flex gap-2 leading-6">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
+                      <span>{topic}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
-                Topics (selection)
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-sm text-zinc-600 dark:text-zinc-300">
-                {MMS_TOPICS.slice(0, 12).map((topic) => (
-                  <div key={topic} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
-                    <span>{topic}</span>
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+                  Committees
+                </h3>
+                <div className="mt-4 space-y-5 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                  <div>
+                    <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                      Organizing Committee
+                    </p>
+                    <ul className="mt-2 space-y-1">
+                      {YFG_MMS_2024_ORGANIZING.map((member) => (
+                        <li key={member.name}>
+                          {member.name} ({member.country})
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
+                  <div>
+                    <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                      Technical Committee
+                    </p>
+                    <ul className="mt-2 space-y-1">
+                      {YFG_MMS_2024_TECHNICAL.map((member) => (
+                        <li key={member.name}>
+                          {member.name} ({member.country})
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div>
-              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
-                Organizing Committee
-              </h3>
-              <ul className="text-sm text-zinc-600 dark:text-zinc-300 space-y-1 mb-5">
-                {YFG_MMS_2024_ORGANIZING.map((member) => (
-                  <li key={member.name}>
-                    {member.name} ({member.country})
-                  </li>
-                ))}
-              </ul>
-
-              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
-                Technical Committee
-              </h3>
-              <ul className="text-sm text-zinc-600 dark:text-zinc-300 space-y-1">
-                {YFG_MMS_2024_TECHNICAL.map((member) => (
-                  <li key={member.name}>
-                    {member.name} ({member.country})
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
-        </section>
-        <section className="rounded-2xl border border-emerald-100 dark:border-emerald-500/20 bg-white dark:bg-zinc-900 shadow-sm p-6">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="inline-flex rounded-full border border-emerald-200 bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-800 dark:border-emerald-400/20 dark:bg-emerald-500/10 dark:text-emerald-300">
+        </div>
+      </section>
+
+      <section className="px-4 pb-12 pt-8 sm:px-8 lg:px-14">
+        <div className="mx-auto max-w-6xl rounded-[20px] border border-emerald-100 bg-emerald-50 p-6 dark:border-emerald-500/20 dark:bg-emerald-950/20 sm:p-8">
+          <div className="grid gap-4 md:grid-cols-[auto_1fr] md:items-start">
+            <span className="inline-flex w-fit rounded-full bg-white px-3 py-1 text-xs font-semibold text-emerald-800 shadow-sm dark:bg-emerald-500/10 dark:text-emerald-200">
               Recurring
             </span>
-            <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
-              YFG Monthly Meetings
-            </h2>
+            <div>
+              <h2 className="text-xl font-semibold leading-tight text-zinc-950 dark:text-white sm:text-2xl">
+                YFG Monthly Meetings
+              </h2>
+              <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-700 dark:text-zinc-300 sm:text-base">
+                Monthly online meetings are open to young faculty members for
+                research updates, networking, and event planning.
+              </p>
+              <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+                Interested in joining? Reach out through the{' '}
+                <a
+                  href="https://iftomm-world.org/cdg-2-iftomm-young-faculty-group/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-sky-700 hover:underline dark:text-sky-300"
+                >
+                  IFToMM YFG page
+                </a>
+                .
+              </p>
+            </div>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-            Monthly online meetings open to all young faculty members — research
-            updates, networking, and event planning.
-          </p>
-          <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
-            Interested in joining? Reach out through the{' '}
-            <a
-              href="https://iftomm-world.org/cdg-2-iftomm-young-faculty-group/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sky-600 dark:text-sky-400 hover:underline"
-            >
-              IFToMM YFG page
-            </a>
-            .
-          </p>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
