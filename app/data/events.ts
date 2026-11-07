@@ -98,14 +98,14 @@ export const YFG_EVENTS: YFGEvent[] = [
       '2nd International Symposium on Heterogeneous and Multi-Domain Systems',
     description:
       'HMDS 2027 focuses on cutting-edge research in cyber-physical systems integration, multi-domain coordination, advanced robotics, and system interoperability. Features workshops, paper presentations, poster sessions, and cultural activities.',
-    date: '2027-04-01',
-    dateFormatted: 'Apr 1–4, 2027',
+    date: '2027-03-30',
+    dateFormatted: 'Mar 30–Apr 2, 2027',
     location: 'Tokyo, Japan',
     venue: 'Tokyo Metropolitan University, Minami-Osawa Campus',
     status: 'upcoming',
     category: 'conference',
     registrationUrl: '/hmds/registration',
-    websiteUrl: 'https://hmds-murex.vercel.app',
+    websiteUrl: 'https://hmds2027.org/',
     imagePlaceholder: 'HMDS',
   },
   {

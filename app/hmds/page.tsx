@@ -4,7 +4,7 @@ import EventPageNav from '@app/components/EventPageNav';
 import { HMDS_PAGE_NAV_ITEMS } from '@app/data/eventPageNav';
 import { HMDS_TOPICS, HMDS_ORGANIZING, HMDS_TECHNICAL } from '@app/data/events';
 
-const HMDS_OFFICIAL_URL = 'https://hmds-murex.vercel.app';
+const HMDS_OFFICIAL_URL = 'https://hmds2027.org/';
 
 export default function HMDSPage() {
   return (
@@ -25,10 +25,11 @@ export default function HMDSPage() {
                 advanced engineering applications.
               </p>
               <div className="mt-7 text-sm leading-7 text-zinc-700 dark:text-zinc-300 max-w-2xl">
-                Current HMDS news, registration, and submission details are
-                published on the official HMDS website. See the registration
-                page for local status notes and the official site for the final
-                portal announcement.
+                See the{' '}
+                <a href={HMDS_OFFICIAL_URL} className="underline">
+                  official HMDS website
+                </a>{' '}
+                for news, registration, and submission details.
               </div>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/70 bg-white/85 p-4 dark:border-white/10 dark:bg-white/10">
@@ -227,7 +228,7 @@ export default function HMDSPage() {
                 </p>
               </div>
               <div className="text-right text-sm text-zinc-600 dark:text-zinc-300">
-                <div className="font-semibold">Apr 1–4, 2027</div>
+                <div className="font-semibold">Mar 30–Apr 2, 2027</div>
                 <div>4-day program</div>
               </div>
             </div>
