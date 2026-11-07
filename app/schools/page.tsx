@@ -1,67 +1,47 @@
 import Link from 'next/link';
+import { SUMMER_SCHOOL, WINTER_SCHOOL } from '@app/data/events';
+
+const schools = [
+  { event: SUMMER_SCHOOL, href: '/summer-school', status: 'Proposed' },
+  { event: WINTER_SCHOOL, href: '/winter-school', status: 'In planning' },
+];
 
 export default function SchoolsPage() {
   return (
-    <div className="mx-auto relative pt-16">
-      <section className="px-6 py-12 sm:px-14 sm:py-14 bg-gradient-to-br from-emerald-50 via-white to-cyan-50 dark:from-emerald-950 dark:via-zinc-900 dark:to-cyan-950">
-        <div className="max-w-5xl mx-auto">
-          <div className="inline-flex items-center rounded-full border border-emerald-200 dark:border-white/20 bg-emerald-50 dark:bg-white/10 px-3 py-1 text-xs font-semibold tracking-[0.12em] uppercase">
-            IFToMM Young Faculty Group
-          </div>
-          <h1 className="mt-5 text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
-            Schools
-          </h1>
-          <p className="mt-4 max-w-3xl text-sm sm:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed">
-            Seasonal programs in Mechanism and Machine Science — summer and
-            winter editions hosted at different locations worldwide.
-          </p>
-        </div>
+    <div className="mx-auto max-w-6xl px-6 py-8 sm:px-14 sm:py-12">
+      <section className="rounded-[28px] border border-sky-100 bg-sky-50 p-6 dark:border-sky-900 dark:bg-slate-900 sm:p-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sky-900 dark:text-sky-300">
+          IFToMM Young Faculty Group
+        </p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl">
+          Schools
+        </h1>
+        <p className="mt-4 text-base text-zinc-700 dark:text-zinc-300">
+          Summer and winter programs in planning for 2027.
+        </p>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6 sm:px-14 py-10 grid gap-6 sm:grid-cols-2">
-        <Link
-          href="/summer-school"
-          className="group rounded-2xl border border-emerald-200 dark:border-emerald-500/20 bg-white dark:bg-zinc-900 p-8 shadow-sm hover:border-emerald-400 dark:hover:border-emerald-400/40 transition-colors"
-        >
-          <span className="inline-flex rounded-full border border-emerald-200 bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-800 dark:border-emerald-400/20 dark:bg-emerald-500/10 dark:text-emerald-300">
-            Upcoming
-          </span>
-          <h2 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors">
-            Tokyo Summer School 2026
-          </h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            Jul 22–31, 2026 · Tokyo Metropolitan University
-          </p>
-          <p className="mt-3 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-            A 10-day program on mechanism and machine science for sustainable
-            urban systems, using Tokyo as a living laboratory.
-          </p>
-          <div className="mt-5 text-sm font-semibold text-emerald-700 dark:text-emerald-300">
-            View full details →
-          </div>
-        </Link>
-
-        <Link
-          href="/winter-school"
-          className="group rounded-2xl border border-cyan-200 dark:border-cyan-500/20 bg-white dark:bg-zinc-900 p-8 shadow-sm hover:border-cyan-400 dark:hover:border-cyan-400/40 transition-colors"
-        >
-          <span className="inline-flex rounded-full border border-cyan-200 bg-cyan-100 px-2.5 py-1 text-xs font-semibold text-cyan-800 dark:border-cyan-400/20 dark:bg-cyan-500/10 dark:text-cyan-300">
-            Upcoming
-          </span>
-          <h2 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors">
-            Winter School 2027
-          </h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            Jan 25–29, 2027 · University of Bío-Bío, Chile
-          </p>
-          <p className="mt-3 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-            Focused on advanced topics in Mechanism and Machine Science,
-            coordinated with YFG President Claudio Villegas.
-          </p>
-          <div className="mt-5 text-sm font-semibold text-cyan-700 dark:text-cyan-300">
-            View full details →
-          </div>
-        </Link>
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        {schools.map(({ event, href, status }) => (
+          <Link
+            key={href}
+            href={href}
+            className="rounded-2xl border border-zinc-200 bg-white p-6 hover:border-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-700 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-sky-500 dark:focus-visible:outline-sky-300"
+          >
+            <span className="rounded-full bg-sky-100 px-3 py-1.5 text-xs font-semibold text-sky-900 dark:bg-sky-900 dark:text-sky-100">
+              {status}
+            </span>
+            <h2 className="mt-4 text-2xl font-semibold text-zinc-950 dark:text-zinc-50">
+              {event.title}
+            </h2>
+            <p className="mt-2 text-sm font-medium text-zinc-700 dark:text-zinc-300">
+              {event.dateFormatted}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
+              {event.description}
+            </p>
+          </Link>
+        ))}
       </div>
     </div>
   );

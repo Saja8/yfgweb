@@ -6,7 +6,6 @@ import { categoryIcon } from '@app/components/icons/CategoryIcons';
 
 type EventDateBarItem = {
   title: string;
-  date: string;
   dateFormatted: string;
   location: string;
   subtitle?: string;
