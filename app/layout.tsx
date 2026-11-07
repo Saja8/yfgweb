@@ -1,6 +1,14 @@
+import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@app/components/Layout/Header';
 import Footer from '@app/components/Layout/Footer';
+
+export const metadata: Metadata = {
+  title: 'IFToMM Young Faculty Group | Events',
+  description:
+    'Events platform of the IFToMM Young Faculty Group: symposia, conferences, summer schools, and winter schools in Mechanism and Machine Science.',
+  icons: { icon: '/favicon.svg' },
+};
 
 export const revalidate = 0;
 
@@ -26,14 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>IFToMM Young Faculty Group | Events</title>
-        <meta
-          name="description"
-          content="Events platform of the IFToMM Young Faculty Group: symposia, conferences, summer schools, and winter schools in Mechanism and Machine Science."
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="color-scheme" content="light dark" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-100">
